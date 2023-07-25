@@ -5,6 +5,7 @@ Tecnlogias Utilizadas
 - NODE JS
 - HTML
 - CSS
+- MySql
 - Yarn
 
 Bilbiotecas Utilizadas
