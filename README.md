@@ -11,3 +11,4 @@ Bilbiotecas Utilizadas
 - Express 
 - Ts-node-dev
 - Cors
+- Prisma
