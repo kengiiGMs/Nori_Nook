@@ -14,3 +14,4 @@ Bilbiotecas Utilizadas
 - Cors
 - Prisma
 - bcryptjs
+- jsonwebtoken (JWT)
