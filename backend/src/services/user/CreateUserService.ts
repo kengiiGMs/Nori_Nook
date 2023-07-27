@@ -1,3 +1,5 @@
+import prismaClient from "../../prisma"
+
 /* Recebe os dados do Controller */
 interface UserRequest {
     name: string,
@@ -7,8 +9,33 @@ interface UserRequest {
 
 class CreateUserService {
     async execute({ name, email, password }: UserRequest) {
-        console.log(name);
-        return { name: name }
+        if (!email) {
+            throw new Error("Email incorrect")
+        }
+        const userAlreadyExists = await prismaClient.user.findFirst({
+            where: {
+                email: email
+            }
+        })
+        if (userAlreadyExists) {
+            throw new Error("User already exists")
+        }
+
+        const user = await prismaClient.user.create({
+            data: {
+                name: name,
+                email: email,
+                password: password
+            },
+            select: {
+                id: true,
+                email: true,
+                name: true,
+            }
+        })
+
+
+        return user;
     }
 }
 
