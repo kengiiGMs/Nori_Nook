@@ -13,3 +13,4 @@ Bilbiotecas Utilizadas
 - Ts-node-dev
 - Cors
 - Prisma
+- bcryptjs
