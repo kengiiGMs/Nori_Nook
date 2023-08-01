@@ -12,12 +12,12 @@ class CreateProductController {
 
         } else {
 
-            const { originalname, filename } = req.file;
+            const { originalname, filename: banner } = req.file;
 
-            console.log(filename)
+
 
             const product = await createProductService.execute({
-                name, price, description, banner: '', category_id
+                name, price, description, banner, category_id
             })
             return res.json(product)
 
