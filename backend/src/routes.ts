@@ -11,13 +11,13 @@ import { CreateCategoryController } from "./controllers/Category/CreateCategoryC
 import { ListCategoryController } from "./controllers/Category/ListCategoryController";
 
 import { CreateProductController } from "./controllers/Product/CreateProductController";
-
+import { ListByCategoryController } from "./controllers/Product/ListByCategoryController";
 
 import uploadConfig from './config/multer';
 
 const router = Router();
 
-const upload = multer(uploadConfig.upload("./imgProduts"))
+const upload = multer(uploadConfig.upload("./imgProducts"))
 
 /* -- Rotas User --- */
 router.post('/users', new CreateUserController().handle)
@@ -30,5 +30,6 @@ router.get('/category', isAuthenticated, new ListCategoryController().handle)
 
 /* -- Rotas Product --- */
 router.post('/product', isAuthenticated, upload.single('file'), new CreateProductController().handle)
+router.get('/category/product', isAuthenticated, new ListByCategoryController().handle)
 
 export { router }
