@@ -22,6 +22,8 @@ import { AddItemController } from "./controllers/Order/AddItemController";
 import { RemoveItemController } from "./controllers/Order/RemoveItemController";
 
 import { SendOrderController } from "./controllers/Order/SendOrderController";
+import { ListOrderController } from "./controllers/Order/ListOrderController";
+
 
 const router = Router();
 
@@ -40,11 +42,13 @@ router.get('/category', isAuthenticated, new ListCategoryController().handle)
 router.post('/product', isAuthenticated, upload.single('file'), new CreateProductController().handle)
 router.get('/category/product', isAuthenticated, new ListByCategoryController().handle)
 
-/* -- Rotas Product --- */
+/* -- Rotas Orders --- */
 router.post('/order', isAuthenticated, new CreateOrderController().handle)
 router.delete('/order', isAuthenticated, new RemoveOrderController().handle)
 router.post('/order/add', isAuthenticated, new AddItemController().handle)
 router.delete('/order/remove', isAuthenticated, new RemoveItemController().handle)
 router.put('/order/send', isAuthenticated, new SendOrderController().handle)
+router.get('/orders', isAuthenticated, new ListOrderController().handle)
+
 
 export { router }
