@@ -15,3 +15,4 @@ Bilbiotecas Utilizadas
 - Prisma
 - bcryptjs
 - jsonwebtoken (JWT)
+- Multer
