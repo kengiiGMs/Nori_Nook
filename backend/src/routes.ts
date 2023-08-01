@@ -16,6 +16,7 @@ import { ListByCategoryController } from "./controllers/Product/ListByCategoryCo
 import uploadConfig from './config/multer';
 
 import { CreateOrderController } from "./controllers/Order/CreateOrderController";
+import { RemoveOrderController } from "./controllers/Order/RemoveOrderController";
 
 const router = Router();
 
@@ -36,6 +37,7 @@ router.get('/category/product', isAuthenticated, new ListByCategoryController().
 
 /* -- Rotas Product --- */
 router.post('/order', isAuthenticated, new CreateOrderController().handle)
+router.delete('/order', isAuthenticated, new RemoveOrderController().handle)
 
 
 
