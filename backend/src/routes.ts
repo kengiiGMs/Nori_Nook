@@ -7,7 +7,7 @@ import { DetailUserController } from "./controllers/User/DetailUserController";
 import { isAuthenticated } from "./middlewares/isAuthenticated";
 
 import { CreateCategoryController } from "./controllers/Category/CreateCategoryController";
-
+import { ListCategoryController } from "./controllers/Category/ListCategoryController";
 
 const router = Router();
 
@@ -18,5 +18,6 @@ router.get('/me', isAuthenticated, new DetailUserController().handle)
 
 /* -- Rotas Category --- */
 router.post('/category', isAuthenticated, new CreateCategoryController().handle)
+router.get('/category', isAuthenticated, new ListCategoryController().handle)
 
 export { router }
