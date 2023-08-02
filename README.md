@@ -18,3 +18,4 @@ Bilbiotecas Utilizadas
 - bcryptjs
 - jsonwebtoken (JWT)
 - Multer
+- React Icons
