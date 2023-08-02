@@ -9,8 +9,8 @@
     --white: #fff;
     --black: #000;
 
-    --primaryColor: #101026;
-    --auxColor: #1D1D2E;
+    --auxColor: #101026;
+    --primaryColor: #1D1D2E;
 
     --gray-100: #8A8A8A;
 
@@ -29,7 +29,7 @@ a {
 }
 
 body {
-    background-color: var(--auxColor);
+    background-color: var(--primaryColor);
 }
 
 body,
