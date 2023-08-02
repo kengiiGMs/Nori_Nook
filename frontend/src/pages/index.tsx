@@ -7,6 +7,8 @@ import logoImg from '../../public/logo.svg'
 import { Input } from '../components/ui/Input/index'
 import { Button } from '../components/ui/Button/index'
 
+import Link from 'next/link'
+
 export default function Home() {
   return (
     <>
@@ -24,8 +26,9 @@ export default function Home() {
             </Button>
           </form>
         </div>
-
-        <a className={styles.text}>Não Possui uma Conta? Cadastre-se</a>
+        <Link href="/signup" legacyBehavior>
+          <a className={styles.text}>Não Possui uma Conta? Cadastre-se</a>
+        </Link>
       </div>
     </>
   )
