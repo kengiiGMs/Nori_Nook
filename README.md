@@ -1,10 +1,12 @@
 Tecnlogias Utilizadas
 - JS
 - REACT
+- Next JS
 - TYPESCRIPT
 - NODE JS
 - HTML
 - CSS
+- Sass
 - MySql
 - Yarn
 
