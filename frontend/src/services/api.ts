@@ -1,6 +1,4 @@
 import axios, { AxiosError } from 'axios'
-import { error } from 'console';
-import { headers } from 'next/dist/client/components/headers';
 import { parseCookies } from 'nookies'
 import { AuthTokenError } from './errors/AuthTokenError'
 import { signOut } from '../contexts/AuthContext';
