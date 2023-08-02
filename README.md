@@ -19,3 +19,6 @@ Bilbiotecas Utilizadas
 - jsonwebtoken (JWT)
 - Multer
 - React Icons
+- Axios 
+- Nookies 
+- Jwt-decode
