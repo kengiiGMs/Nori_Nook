@@ -23,3 +23,4 @@ Bilbiotecas Utilizadas
 - Nookies 
 - Jwt-decode
 - React-toastify
+- React-modal
