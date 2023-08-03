@@ -22,3 +22,4 @@ Bilbiotecas Utilizadas
 - Axios 
 - Nookies 
 - Jwt-decode
+- React-toastify
