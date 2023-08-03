@@ -1,9 +1,19 @@
 import { canSSRAuth } from "../../utils/canSSRAuth"
+import Head from "next/head"
 
+import { Header } from '../../components/Header'
 
 export default function Dashboard() {
     return (
-        <h1>Bem vindo ao Painel</h1>
+        <>
+            <Head>
+                <title>Painel - Nori Nook</title>
+            </Head>
+            <div>
+                <Header />
+                <h1>Painel</h1>
+            </div>
+        </>
     )
 }
 
