@@ -6,9 +6,25 @@ import { canSSRAuth } from "../../utils/canSSRAuth";
 
 import { FiUpload } from 'react-icons/fi';
 
-export default function Product() {
+import { setupAPIClient } from "../../services/api";
+
+type ItemProps = {
+    id: string;
+    name: string;
+}
+
+interface CategoryProps {
+    categoryList: ItemProps[]
+}
+
+
+export default function Product({ categoryList }: CategoryProps) {
+    console.log(categoryList)
     const [avatarUrl, setAvatarUrl] = useState('');
     const [imageAvatar, setImageAvatar] = useState(null)
+
+    const [categories, setCategories] = useState(categoryList || [])
+    const [categorySelected, setCategorySelected] = useState(0)
 
     function handleFile(e: ChangeEvent<HTMLInputElement>) {
         if (!e.target.files) {
@@ -26,6 +42,11 @@ export default function Product() {
             setAvatarUrl(URL.createObjectURL(e.target.files[0]))
         }
     }
+
+    function handleChangeCategory(event) {
+        setCategorySelected(event.target.value)
+    }
+
 
     return (
         <>
@@ -53,13 +74,14 @@ export default function Product() {
                             )}
                         </label>
 
-                        <select>
-                            <option>
-                                Bebidas
-                            </option>
-                            <option>
-                                Sushis
-                            </option>
+                        <select value={categorySelected} onChange={handleChangeCategory}>
+                            {categories.map((item, index) => {
+                                return (
+                                    <option key={item.id} value={index}>
+                                        {item.name}
+                                    </option>
+                                )
+                            })}
                         </select>
 
                         <input type="text" placeholder="Digite o Nome do Produto" className={styles.input} />
@@ -75,9 +97,14 @@ export default function Product() {
 }
 
 export const getServerSideProps = canSSRAuth(async (ctx) => {
+    const apiClient = setupAPIClient(ctx)
+
+    const response = await apiClient.get('/category')
+
+
     return {
         props: {
-
+            categoryList: response.data
         }
     }
 })
