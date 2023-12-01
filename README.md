@@ -1,7 +1,9 @@
 Tecnlogias Utilizadas
 - JS
 - REACT
+- REACT Native
 - Next JS
+- EXPO
 - TYPESCRIPT
 - NODE JS
 - HTML
