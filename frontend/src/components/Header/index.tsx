@@ -13,7 +13,7 @@ export function Header() {
         <header className={styles.headerContainer}>
             <div className={styles.headerContent}>
                 <Link href="/dashboard" legacyBehavior>
-                    <img src="/logo.svg" width={190} height={60} />
+                    <img src="../logo.svg" width={190} height={60} />
                 </Link>
                 <nav className={styles.menuNav}>
                     <Link href="/category" legacyBehavior>
@@ -25,7 +25,7 @@ export function Header() {
                     </Link>
 
                     <button onClick={signOut}>
-                        <FiLogOut color="#fff" size={24} />
+                        <FiLogOut color="#FF3F4B" size={24} />
                     </button>
                 </nav>
             </div>

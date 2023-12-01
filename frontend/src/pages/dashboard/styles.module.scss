@@ -9,7 +9,7 @@
 
 
 .container h1 {
-    color: var(--white);
+    color: var(--black);
 }
 
 .containerHeader {
@@ -42,7 +42,7 @@
         border: 0;
         background: transparent;
         font-size: 1.2rem;
-        color: var(--white);
+        color: var(--red);
         height: 60px;
         align-items: center;
         display: flex;
@@ -51,7 +51,7 @@
 
 .tag {
     width: 9px;
-    background-color: var(--buttonSuccess);
+    background-color: var(--red);
     height: 60px;
     border-radius: 0.3rem 0 0 0.3rem;
     margin-right: 1rem;

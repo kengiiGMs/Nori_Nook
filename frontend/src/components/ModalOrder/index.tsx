@@ -21,7 +21,7 @@ export function ModalOrder({ isOpen, onRequestClose, order, handleFinishOrder }:
             right: 'auto',
             padding: '50px',
             transform: 'translate(-50%, -50%)',
-            backgroundColor: '#1d1d2e'
+            backgroundColor: '#fff'
         }
     }
 

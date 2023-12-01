@@ -102,7 +102,7 @@ export default function Product({ categoryList }: CategoryProps) {
 
                         <label className={styles.labelAvatar}>
                             <span>
-                                <FiUpload size={30} color="#fff" />
+                                <FiUpload size={30} color="#FF3F4B" />
                             </span>
                             <input type="file" accept="image/png, imagem/jpeg" onChange={handleFile} />
                             {avatarUrl && (
