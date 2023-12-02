@@ -26,3 +26,4 @@ Bilbiotecas Utilizadas
 - Jwt-decode
 - React-toastify
 - React-modal
+- React-navigation
