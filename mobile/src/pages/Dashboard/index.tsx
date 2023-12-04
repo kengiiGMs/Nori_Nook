@@ -4,7 +4,7 @@ import { AuthContext } from '../../contexts/AuthContext';
 import { useNavigation } from '@react-navigation/native';
 import { StackParamsList } from '../../routes/app.routes';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-
+import { api } from '../../services/api';
 
 export default function Dashboard() {
     const navigation = useNavigation<NativeStackNavigationProp<StackParamsList>>();
@@ -15,7 +15,13 @@ export default function Dashboard() {
             return;
         }
 
-        navigation.navigate('Order', { number: number, order_id: '111' })
+        const response = await api.post('/order', {
+            table: Number(number)
+        })
+
+        navigation.navigate('Order', { number: number, order_id: response.data.id })
+
+        setNumber('');
     }
 
     const { signOut } = useContext(AuthContext)
