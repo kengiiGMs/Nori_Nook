@@ -27,3 +27,4 @@ Bilbiotecas Utilizadas
 - React-toastify
 - React-modal
 - React-navigation
+- Async-Storage
