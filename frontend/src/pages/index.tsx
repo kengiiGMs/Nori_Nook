@@ -46,6 +46,8 @@ export default function Home() {
     <>
       <Head>
         <title>Nori Nook | Faça o seu Login</title>
+        <link rel="icon" type="image/png" href="./iconLogo.png" sizes="16x16" />
+
       </Head>
       <div className={styles.containerCenter}>
         <Image src={logoImg} alt="Logo NoriNook" />
