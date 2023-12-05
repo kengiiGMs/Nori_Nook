@@ -9,7 +9,7 @@
 
 
 <p align="center">
-  <img src="https://github.com/kengiiGMs/Nori_Nook/assets/80048095/153b95f7-9ecf-421b-b929-8a96f77893cd"  height="600" /></br>
+  <img src="https://github.com/kengiiGMs/Nori_Nook/assets/80048095/153b95f7-9ecf-421b-b929-8a96f77893cd"/></br>
   <sub>Funcionamento do Sistema Web - (Visão da Cozinha)</sub>
 </p>
 
